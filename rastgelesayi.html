@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 id="mesaj"></h1>
+
+        <script>
+            var mesaj = document.getElementById("mesaj");
+
+            var sayi = Math.random();
+            mesaj.innerHTML = sayiUret(80, 100);
+            //20 100
+            //taban kısmı icin 100-20 dersek 0 ile 80 arası sayı uretir yani (max-min)+min
+            //florr zemine yuvarlar
+            //ceil tava yuvarlar
+            //round en yakına yuvarlar
+            function sayiUret(min, max) {
+                //max degiskeni rastegele sayi uretmek icin kullanılır
+                //return urettigimiz degeri geri dondurur
+                var sayi = Math.floor(Math.random() * (max - min)) + min;
+                return sayi;
+            }
+        </script>
+    </body>
+</html>
